@@ -44,7 +44,7 @@ function App() {
         <h1>Luis Fernando Parra</h1>
 
         <h3>
-          Estadístico · Data Scientist · Geospatial Analytics
+          Ingeniero Forestal · Estadístico · Data Scientist · Geospatial Analytics
         </h3>
 
         <p>
