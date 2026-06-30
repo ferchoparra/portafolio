@@ -6,17 +6,17 @@ const projects = [
     title: "Visualización de proyectos",
     file: "front-end.md",
     summary:
-      "Sistema estadistico para estimar capitalizacion agricola combinando informacion productiva, economica y territorial.",
+      "Visualización de di",
     technologies: ["R", "SQL", "PostGIS", "QGIS", "Modelos estadisticos", "GIS"],
     featured: true,
   },
   {
     slug: "modelo-zonas-homogeneas-fisicas",
-    title: "Modelo agrupación Zonas Homogéneas Físicas Catastrales",
+    title: "Modelo Zonas Homogéneas Físicas Catastrales",
     file: "modelo-zonas-homogeneas-fisicas.md",
     summary:
-      "Sistema estadistico para estimar capitalizacion agricola combinando informacion productiva, economica y territorial.",
-    technologies: ["R", "SQL", "PostGIS", "QGIS", "Modelos estadisticos", "GIS"],
+      "Diseño e implementación de una metodología basada en teoría de grafos para la agrupación de zonas homogéneas físicas de los procesos de actualización catastral.",
+    technologies: ["R", "Teoría de grafos", "Procedimiento SKATER"],
     featured: true,
   },
   {
@@ -24,8 +24,9 @@ const projects = [
     title: "Pipeline Spatk Unity Catalog",
     file: "pipeline-UC-spark.md",
     summary:
-      "Sistema estadistico para estimar capitalizacion agricola combinando informacion productiva, economica y territorial.",
-    technologies: ["R", "SQL", "PostGIS", "QGIS", "Modelos estadisticos", "GIS"],
+      "Pipeline de procesamiento para preparar datos analiticos desde fuentes masivas para la implementar un modelo de capitalización de renta agropecuaria.",
+    // Arquitectura para transformar y analizar grandes volumenes de datos espaciales con formatos columnares.
+    technologies: ["R", "Python", "Unity Catalog", "Spark", "MLflow"],
     featured: true,
   },
   {
@@ -33,8 +34,8 @@ const projects = [
     title: "Modelo de Capitalizacion de Renta Agropecuaria",
     file: "modelo-capitalizacion-agricola.md",
     summary:
-      "Sistema estadistico para estimar capitalizacion agricola combinando informacion productiva, economica y territorial.",
-    technologies: ["R", "SQL", "PostGIS", "QGIS", "Modelos estadisticos", "GIS"],
+      "Diseño e implementación de un modelo de capitalización de renta agropecuaria como insumo para generar avalúos catastrales de manera masiva.",
+    technologies: ["R", "QGIS", "Modelos estadisticos", "Series de tiempo"],
     featured: true,
   },
   {
@@ -42,8 +43,8 @@ const projects = [
     title: "Flujo de procesamiento para liquidación catastral",
     file: "procesamiento-liquidacion-catastral.md",
     summary:
-      "Sistema estadistico para estimar capitalizacion agricola combinando informacion productiva, economica y territorial.",
-    technologies: ["R", "SQL", "PostGIS", "QGIS", "Modelos estadisticos", "GIS"],
+      "Pipeline para procesamiento de información e implementación de liquidación para procesos de actualización catastral.",
+    technologies: ["R", "Google Colab"],
     featured: true,
   },
   {
@@ -51,8 +52,17 @@ const projects = [
     title: "Modelo de contabilidad de emisiones de carbono",
     file: "modelo-contabilidad-carbono.md",
     summary:
-      "Sistema estadistico para estimar capitalizacion agricola combinando informacion productiva, economica y territorial.",
-    technologies: ["R", "SQL", "PostGIS", "QGIS", "Modelos estadisticos", "GIS"],
+      "Modelo de contabilidad de emisiones de carbono para los sectores de agricultura, silvicultura y otros usos de la tierra.",
+    technologies: ["R", "NDC", "BUR-Colombia"],
+    featured: true,
+  },
+  {
+    slug: "bst-patrones-puntuales",
+    title: "Ánalisis de la estructura espacial de un bosque seco tropical mediante patrones puntuales",
+    file: "pp-bst.md",
+    summary:
+      "Se utilizan diferentes herramientas provenientes de la téoria de procesos puntuales, para analizar la estructura espacial de los árboles de un bosque seco tropical.",
+    technologies: ["R", "QGIS", "Tesis de maestria", "Patrones puntuales marcados"],
     featured: true,
   },
   {
@@ -60,8 +70,8 @@ const projects = [
     title: "Modelo de regionalización",
     file: "mod-regionalizacion.md",
     summary:
-      "Modelos predictivos para anticipar rendimientos usando informacion climatica, historica y espacial.",
-    technologies: ["Python", "R", "Scikit-learn", "XGBoost", "Geoestadistica", "GIS"],
+      "Modelo de clasificación a partir de herramientas de téoria de grafos, basado en información de cadenas agropecuarias.",
+    technologies: ["R", "QGIS", "Teoría de grafos", "Procedimiento SKATER"],
     featured: true,
   },
   {
@@ -69,8 +79,8 @@ const projects = [
     title: "Modelo de optimización para la producción agropecuaria",
     file: "mod-optimizacion.md",
     summary:
-      "Arquitectura para transformar y analizar grandes volumenes de datos espaciales con formatos columnares.",
-    technologies: ["PySpark", "GeoParquet", "Python", "PostGIS", "SQL", "Big Data"],
+      "Modelos de optimización de la producción para diferentes sistemas agropecurios bajo escenarios prospectivos",
+    technologies: ["R", "GAMS", "QGIS", "programación lineal"],
     featured: true,
   },
   {
@@ -78,8 +88,8 @@ const projects = [
     title: "Prospectiva agropecuaria",
     file: "prospectiva-agropecuaria.md",
     summary:
-      "Aplicacion analitica en Shiny para explorar indicadores estadisticos y mapas interactivos.",
-    technologies: ["R", "Shiny", "Leaflet", "ggplot2", "DT", "GIS"],
+      "Sistema de modelación para cadenas agropecuarias: proyecciones económicas, modelo de equilibrio parcial y modelo de optimización. Con enfoque en prospectiva cuantitativa. ",
+    technologies: ["R", "GAMS", "series de tiempo", "modelos de optimización", "prospectiva cuantitativa"],
     featured: false,
   },
   {
@@ -87,8 +97,8 @@ const projects = [
     title: "Modelo de crecimiento y rendimiento forestal",
     file: "modelo-forestal.md",
     summary:
-      "Pipeline de procesamiento distribuido para preparar datos analiticos desde fuentes masivas.",
-    technologies: ["PySpark", "Python", "SQL", "Parquet", "Data Engineering", "Big Data"],
+      "Modelo de crecimiento y rendimiento forestal, herramienta para la prospectiva del sector forestal comercial de Colombia.",
+    technologies: ["R", "ecuaciones alometricas", "modelos de ahusamiento", "sector forestal"],
     featured: false,
   },
 ];
