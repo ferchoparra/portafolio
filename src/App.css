@@ -519,6 +519,49 @@ code {
   padding-left: 20px;
 }
 
+.markdown a {
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.markdown img {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  display: block;
+  height: auto;
+  margin: 22px 0;
+  max-width: 100%;
+}
+
+.markdown-table-wrap {
+  overflow-x: auto;
+}
+
+.markdown table {
+  border-collapse: collapse;
+  margin: 22px 0;
+  min-width: 620px;
+  width: 100%;
+}
+
+.markdown th,
+.markdown td {
+  border: 1px solid var(--line);
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.markdown th {
+  background: var(--surface-muted);
+  color: var(--accent-strong);
+}
+
+.markdown td {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .contact-page {
   align-content: center;
   display: grid;

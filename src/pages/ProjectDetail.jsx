@@ -1,5 +1,7 @@
 import { ArrowLeft } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
+import MarkdownRenderer from "../components/MarkdownRenderer";
 import projects from "../data/projects";
 import routes from "../routes";
 import usePageTitle from "../utils/usePageTitle";
@@ -7,19 +9,23 @@ import usePageTitle from "../utils/usePageTitle";
 function ProjectDetail() {
   const { slug } = useParams();
   const project = projects.find((item) => item.slug === slug);
+  const [content, setContent] = useState("");
 
   usePageTitle(project ? `${project.title} | Proyecto` : "Proyecto no encontrado");
 
-  if (!project) return <Navigate to={routes.projects} replace />;
+  useEffect(() => {
+    if (!project?.file) return;
+    fetch(`${process.env.PUBLIC_URL}/content/projects/${project.file}`)
+      .then((response) => response.text())
+      .then(setContent)
+      .catch(() =>
+        setContent(
+          "# Contenido no disponible\n\nRevisa que el archivo Markdown exista en public/content/projects/."
+        )
+      );
+  }, [project]);
 
-  const sections = [
-    ["Resumen ejecutivo", project.summary],
-    ["Problema", project.problem],
-    ["Datos utilizados", project.data],
-    ["Metodología", project.methodology],
-    ["Resultados", project.results],
-    ["Lecciones aprendidas", project.lessons],
-  ];
+  if (!project) return <Navigate to={routes.projects} replace />;
 
   return (
     <article className="section-shell page-block project-detail">
@@ -38,14 +44,7 @@ function ProjectDetail() {
         </div>
       </div>
 
-      <div className="detail-grid">
-        {sections.map(([title, body]) => (
-          <section className="detail-section" key={title}>
-            <h2>{title}</h2>
-            <p>{body}</p>
-          </section>
-        ))}
-      </div>
+      <MarkdownRenderer content={content} />
     </article>
   );
 }
