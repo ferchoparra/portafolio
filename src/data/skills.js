@@ -4,19 +4,19 @@ const skillGroups = [
     skills: ["Modelos estadisticos", "Machine Learning", "Validacion cruzada", "Series y prediccion", "Inferencia"],
   },
   {
-    title: "Geoespacial",
-    skills: ["Geoestadistica", "GIS", "PostGIS", "QGIS", "Analisis espacial", "GeoParquet"],
+    title: "Estadística Espacial",
+    skills: ["Geoestadística", "Lattice - Modelos de Área", "Patrones puntuales", "Teoría de Grafos", "GIS", "GeoParquet"],
   },
   {
-    title: "Programacion y Datos",
-    skills: ["R", "Python", "PySpark", "SQL", "Shiny", "Pipelines reproducibles"],
+    title: "Programacion y Manejo de Datos",
+    skills: ["R", "Python", "Spark", "SQL", "PostGIS", "Parquet", "Git", "Pipelines reproducibles"],
   },
   {
     title: "Visualizacion",
-    skills: ["Dashboards", "Mapas interactivos", "Storytelling con datos", "Reportes tecnicos"],
+    skills: ["Dashboards", "Mapas interactivos", "Storytelling con datos", "Reportes tecnicos", "Shiny", "PowerBi"],
   },
 ];
 
-export const coreTechnologies = ["R", "Python", "PySpark", "SQL", "PostGIS", "QGIS", "Machine Learning", "GIS"];
+export const coreTechnologies = ["R", "Python", "Spark", "SQL", "PostGIS", "QGIS", "Machine Learning"];
 
 export default skillGroups;

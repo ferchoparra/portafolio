@@ -36,13 +36,13 @@ function Home() {
         </div>
         <div className="prose">
           <p>
-            Soy ingeniero forestal con formacion de posgrado en Estadistica y experiencia
-            desarrollando modelos estadisticos, modelos de machine learning, procesos
-            geoestadisticos y soluciones de analitica espacial.
+            Soy ingeniero forestal con formacion de posgrado en Estadística y experiencia
+            desarrollando modelos estadisticos (énfasis en estadística espacial), modelos de machine learning, y flujos o pipelines
+            para generar soluciones de analitica espacial.
           </p>
           <p>
-            Mi trabajo conecta datos, territorio y decision: desde la preparacion de datos
-            con R, Python, SQL y PySpark hasta la comunicacion de resultados mediante mapas,
+            Mi trabajo conecta datos, territorio y decision: desde la preparación de datos
+            con R, Python, SQL y Spark hasta la comunicacion de resultados mediante mapas,
             dashboards Shiny y visualizaciones tecnicas.
           </p>
         </div>
@@ -59,7 +59,7 @@ function Home() {
       <section id="skills" className="section-shell section-block">
         <div className="section-heading">
           <p className="eyebrow">Habilidades</p>
-          <h2>Capacidades tecnicas</h2>
+          <h2>Capacidades técnicas</h2>
         </div>
         <div className="skills-grid">
           {skillGroups.map((group) => (
@@ -71,7 +71,7 @@ function Home() {
       <section id="projects" className="section-shell section-block">
         <div className="section-heading">
           <p className="eyebrow">Proyectos destacados</p>
-          <h2>Casos reales para mostrar impacto tecnico</h2>
+          <h2>Casos reales para mostrar impacto técnico</h2>
         </div>
         <div className="projects-grid">
           {featuredProjects.map((project) => (
@@ -85,8 +85,7 @@ function Home() {
           <p className="eyebrow">CV</p>
           <h2>Curriculum profesional</h2>
           <p>
-            El boton usa una ruta configurable. Reemplaza el archivo en
-            <code> public/assets/cv/luis-fernando-parra-cv.pdf</code> por tu version final.
+            
           </p>
         </div>
         <a className="button primary" href={profile.cvUrl} download>

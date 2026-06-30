@@ -2,27 +2,51 @@
 const experience = [
   {
     period: "Actualidad",
-    role: "Data Scientist | Estadistica Aplicada y Analitica Geoespacial",
-    organization: "Proyectos profesionales y consultoria",
+    role: "Profesional especializado - Experto en procesamiento de datos",
+    organization: "CORPROGRESO - IGAC",
     description:
-      "Diseno de modelos estadisticos, analisis espacial, automatizacion de pipelines y visualizacion de resultados para problemas productivos, ambientales y territoriales.",
-    highlights: ["Modelamiento predictivo", "Geoestadistica", "R, Python, PySpark", "PostGIS y QGIS"],
+      "Diseñar e implementar modelos estadísticos y de aprendizaje automático que incorporen componente espacial, aplicados al componente económico del catastro multiproposito.",
+    highlights: ["Modelamiento", "R, Python, Spark", "Unity Catalog", "QGIS", "Git"],
   },
   {
-    period: "Experiencia reciente",
-    role: "Especialista en Modelos Estadisticos",
-    organization: "Sector agropecuario y territorial",
+    period: "2023 - 2025",
+    role: "Analista de datos",
+    organization: "Instituto Geográfico Agustín Codazzi - IGAC",
     description:
-      "Construccion de metodologias reproducibles para estimacion, validacion y comunicacion de indicadores con soporte estadistico.",
-    highlights: ["Inferencia estadistica", "Validacion de modelos", "Analisis de incertidumbre"],
+      "Desarrollo de modelos estadísticos, econométricos y de aprendizaje automático que incorporen componente espacial, aplicados a la valoración del suelo para el componente económico del catastro multiproposito.",
+    highlights: ["Modelamiento", "Avalúos catastrales",  "R, Python", "QGIS", "Git"],
   },
   {
-    period: "Formacion avanzada",
-    role: "Especialista y Magister en Estadistica",
-    organization: "Trayectoria academica",
+    period: "2017 - 2025",
+    role: "Investigador",
+    organization: "Unidad de planificación de tierras rurales, adecuación de tierras y usos agropecuarios - UPRA",
     description:
-      "Profundizacion en estadistica aplicada, modelos predictivos, diseno metodologico y analisis de datos complejos.",
-    highlights: ["Estadistica aplicada", "Machine Learning", "Investigacion cuantitativa"],
+      "Desarrollo de diversos tipos de modelos que sirven como instrumentos para el análisis prospectivo y la planificación estratégica de diferentes cadenas agropecuarias.",
+    highlights: ["Modelos económetricos", "Validación de modelos", "Modelos de optimización", "R, Python, GAMS", "Shiny"],
+  },
+  {
+    period: "2021 - 2022",
+    role: "Analista de datos",
+    organization: "Unidad Administrativa Especial de Catastro Distrital - UAECD",
+    description:
+      "Desarrollo de codigos para apoyar la automatización de los procesos de liquidación de avalúos catastrales para diferentes municipios de Colombia",
+    highlights: ["Automatización", "R, Python", "Google Colab"],
+  },
+  {
+    period: "2021",
+    role: "Analista de datos",
+    organization: "Universidad de los Andes",
+    description:
+      "Desarrollo de un modelo de contabilidad de carbono para cultivos y ganado a nivel nacional en Colombia, para apoyar el diagnostico de la Contribución Determinada a Nivel Nacional de Colombia - NDC",
+    highlights: ["Estadística aplicada", "Emisiones de carbono", "R"],
+  },
+  {
+    period: "2012 - 2016",
+    role: "Investigador",
+    organization: "Corporación Nacional de Investigación y Fomento Forestal - CONIF",
+    description:
+      "Análisis de información de crecimiento y rendimiento de diversas especies utilizadas en plantaciones forestales en Colombia.",
+    highlights: ["Estadística aplicada", "Diseño de experimentos","Recolección y Análisis de datos", "R"],
   },
 ];
 

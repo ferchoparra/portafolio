@@ -12,7 +12,7 @@ function Projects() {
         <h1>Proyectos de Data Science, ML y GIS</h1>
         <p>
           Casos estructurados con problema, datos, metodologia, tecnologias, resultados y
-          aprendizajes. Personaliza estos ejemplos con metricas, instituciones y enlaces reales.
+          aprendizajes.
         </p>
       </div>
       <div className="projects-grid">
