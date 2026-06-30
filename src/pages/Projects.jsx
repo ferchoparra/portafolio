@@ -11,7 +11,7 @@ function Projects() {
         <p className="eyebrow">Portafolio tecnico</p>
         <h1>Proyectos de Data Science, ML y GIS</h1>
         <p>
-          Casos estructurados con problema, datos, metodologia, tecnologias, resultados y
+          Casos estructurados con problema, datos, metodología, tecnologías, resultados y
           aprendizajes.
         </p>
       </div>

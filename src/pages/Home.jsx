@@ -36,14 +36,14 @@ function Home() {
         </div>
         <div className="prose">
           <p>
-            Soy ingeniero forestal con formacion de posgrado en Estadística y experiencia
+            Soy ingeniero forestal con formación de posgrado en Estadística y experiencia
             desarrollando modelos estadisticos (énfasis en estadística espacial), modelos de machine learning, y flujos o pipelines
             para generar soluciones de analitica espacial.
           </p>
           <p>
             Mi trabajo conecta datos, territorio y decision: desde la preparación de datos
             con R, Python, SQL y Spark hasta la comunicacion de resultados mediante mapas,
-            dashboards Shiny y visualizaciones tecnicas.
+            dashboards Shiny y visualizaciones técnicas.
           </p>
         </div>
       </section>

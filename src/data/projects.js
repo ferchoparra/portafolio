@@ -1,8 +1,8 @@
 // Agrega, edita o elimina proyectos desde este arreglo para escalar el portafolio.
 const projects = [
   {
-    slug: "modelo-capitalizacion-agricola",
-    title: "Modelo de Capitalizacion Agricola",
+    slug: "front-end",
+    title: "Visualización de proyectos",
     summary:
       "Sistema estadistico para estimar capitalizacion agricola combinando informacion productiva, economica y territorial.",
     problem:
@@ -19,8 +19,98 @@ const projects = [
     featured: true,
   },
   {
-    slug: "prediccion-rendimientos-agricolas",
-    title: "Prediccion de Rendimientos Agricolas",
+    slug: "modelo-zonas-homogeneas-fisicas",
+    title: "Modelo agrupación Zonas Homogéneas Físicas Catastrales",
+    summary:
+      "Sistema estadistico para estimar capitalizacion agricola combinando informacion productiva, economica y territorial.",
+    problem:
+      "La evaluacion de capitalizacion agricola requeria integrar fuentes heterogeneas y reducir sesgos de estimacion entre regiones con condiciones productivas distintas.",
+    data:
+      "Registros administrativos, series de produccion agricola, precios historicos, variables climaticas, coberturas de suelo y capas espaciales municipales.",
+    methodology:
+      "Se construyeron modelos estadisticos jerarquicos y validaciones por estratos territoriales, con controles de calidad, imputacion robusta y analisis de sensibilidad.",
+    technologies: ["R", "SQL", "PostGIS", "QGIS", "Modelos estadisticos", "GIS"],
+    results:
+      "Se obtuvo una metodologia reproducible para estimar indicadores de capitalizacion y comparar escenarios por territorio, cultivo y periodo.",
+    lessons:
+      "La trazabilidad de supuestos y la validacion territorial son tan importantes como la metrica global del modelo.",
+    featured: true,
+  },
+  {
+    slug: "pipeline-UC-spark",
+    title: "Pipeline Spatk Unity Catalog",
+    summary:
+      "Sistema estadistico para estimar capitalizacion agricola combinando informacion productiva, economica y territorial.",
+    problem:
+      "La evaluacion de capitalizacion agricola requeria integrar fuentes heterogeneas y reducir sesgos de estimacion entre regiones con condiciones productivas distintas.",
+    data:
+      "Registros administrativos, series de produccion agricola, precios historicos, variables climaticas, coberturas de suelo y capas espaciales municipales.",
+    methodology:
+      "Se construyeron modelos estadisticos jerarquicos y validaciones por estratos territoriales, con controles de calidad, imputacion robusta y analisis de sensibilidad.",
+    technologies: ["R", "SQL", "PostGIS", "QGIS", "Modelos estadisticos", "GIS"],
+    results:
+      "Se obtuvo una metodologia reproducible para estimar indicadores de capitalizacion y comparar escenarios por territorio, cultivo y periodo.",
+    lessons:
+      "La trazabilidad de supuestos y la validacion territorial son tan importantes como la metrica global del modelo.",
+    featured: true,
+  },
+    {
+    slug: "modelo-capitalizacion-agricola",
+    title: "Modelo de Capitalizacion de Renta Agropecuaria",
+    summary:
+      "Sistema estadistico para estimar capitalizacion agricola combinando informacion productiva, economica y territorial.",
+    problem:
+      "La evaluacion de capitalizacion agricola requeria integrar fuentes heterogeneas y reducir sesgos de estimacion entre regiones con condiciones productivas distintas.",
+    data:
+      "Registros administrativos, series de produccion agricola, precios historicos, variables climaticas, coberturas de suelo y capas espaciales municipales.",
+    methodology:
+      "Se construyeron modelos estadisticos jerarquicos y validaciones por estratos territoriales, con controles de calidad, imputacion robusta y analisis de sensibilidad.",
+    technologies: ["R", "SQL", "PostGIS", "QGIS", "Modelos estadisticos", "GIS"],
+    results:
+      "Se obtuvo una metodologia reproducible para estimar indicadores de capitalizacion y comparar escenarios por territorio, cultivo y periodo.",
+    lessons:
+      "La trazabilidad de supuestos y la validacion territorial son tan importantes como la metrica global del modelo.",
+    featured: true,
+  },
+  {
+    slug: "procesamiento-liquidacion-catastral",
+    title: "Flujo de procesamiento para liquidación catastral",
+    summary:
+      "Sistema estadistico para estimar capitalizacion agricola combinando informacion productiva, economica y territorial.",
+    problem:
+      "La evaluacion de capitalizacion agricola requeria integrar fuentes heterogeneas y reducir sesgos de estimacion entre regiones con condiciones productivas distintas.",
+    data:
+      "Registros administrativos, series de produccion agricola, precios historicos, variables climaticas, coberturas de suelo y capas espaciales municipales.",
+    methodology:
+      "Se construyeron modelos estadisticos jerarquicos y validaciones por estratos territoriales, con controles de calidad, imputacion robusta y analisis de sensibilidad.",
+    technologies: ["R", "SQL", "PostGIS", "QGIS", "Modelos estadisticos", "GIS"],
+    results:
+      "Se obtuvo una metodologia reproducible para estimar indicadores de capitalizacion y comparar escenarios por territorio, cultivo y periodo.",
+    lessons:
+      "La trazabilidad de supuestos y la validacion territorial son tan importantes como la metrica global del modelo.",
+    featured: true,
+  },
+  {
+    slug: "modelo-contabilidad-carbono",
+    title: "Modelo de contabilidad de emisiones de carbono",
+    summary:
+      "Sistema estadistico para estimar capitalizacion agricola combinando informacion productiva, economica y territorial.",
+    problem:
+      "La evaluacion de capitalizacion agricola requeria integrar fuentes heterogeneas y reducir sesgos de estimacion entre regiones con condiciones productivas distintas.",
+    data:
+      "Registros administrativos, series de produccion agricola, precios historicos, variables climaticas, coberturas de suelo y capas espaciales municipales.",
+    methodology:
+      "Se construyeron modelos estadisticos jerarquicos y validaciones por estratos territoriales, con controles de calidad, imputacion robusta y analisis de sensibilidad.",
+    technologies: ["R", "SQL", "PostGIS", "QGIS", "Modelos estadisticos", "GIS"],
+    results:
+      "Se obtuvo una metodologia reproducible para estimar indicadores de capitalizacion y comparar escenarios por territorio, cultivo y periodo.",
+    lessons:
+      "La trazabilidad de supuestos y la validacion territorial son tan importantes como la metrica global del modelo.",
+    featured: true,
+  },
+  {
+    slug: "mod-regionalizacion",
+    title: "Modelo de regionalización",
     summary:
       "Modelos predictivos para anticipar rendimientos usando informacion climatica, historica y espacial.",
     problem:
@@ -37,8 +127,8 @@ const projects = [
     featured: true,
   },
   {
-    slug: "procesamiento-geoespacial-masivo",
-    title: "Procesamiento Geoespacial Masivo",
+    slug: "mod-optimizacion",
+    title: "Modelo de optimización para la producción agropecuaria",
     summary:
       "Arquitectura para transformar y analizar grandes volumenes de datos espaciales con formatos columnares.",
     problem:
@@ -55,8 +145,8 @@ const projects = [
     featured: true,
   },
   {
-    slug: "dashboard-shiny",
-    title: "Dashboard Shiny",
+    slug: "prospectiva-agropecuaria",
+    title: "Prospectiva agropecuaria",
     summary:
       "Aplicacion analitica en Shiny para explorar indicadores estadisticos y mapas interactivos.",
     problem:
@@ -73,8 +163,8 @@ const projects = [
     featured: false,
   },
   {
-    slug: "pipeline-pyspark",
-    title: "Pipeline PySpark",
+    slug: "modelo-forestal",
+    title: "Modelo de crecimiento y rendimiento forestal",
     summary:
       "Pipeline de procesamiento distribuido para preparar datos analiticos desde fuentes masivas.",
     problem:

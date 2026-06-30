@@ -38,13 +38,13 @@ function Hero() {
         <MapPinned size={30} />
         <h2>Modelos con contexto territorial</h2>
         <p>
-          Union de estadistica, informacion espacial y procesamiento escalable para problemas
-          agricolas, ambientales y de decision publica.
+          Unión de estadística, información espacial y procesamiento escalable para problemas
+          agrícolas, ambientales y de decisión pública.
         </p>
         <dl>
           <div>
             <dt>Stack</dt>
-            <dd>R, Python, PySpark, SQL</dd>
+            <dd>R, Python, Spark, SQL</dd>
           </div>
           <div>
             <dt>Geo</dt>
@@ -52,7 +52,7 @@ function Hero() {
           </div>
           <div>
             <dt>Modelos</dt>
-            <dd>ML, geoestadistica, inferencia</dd>
+            <dd>ML, Estadística Espacial, Inferencia</dd>
           </div>
         </dl>
       </aside>

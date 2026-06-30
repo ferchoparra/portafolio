@@ -16,7 +16,7 @@ function ProjectDetail() {
     ["Resumen ejecutivo", project.summary],
     ["Problema", project.problem],
     ["Datos utilizados", project.data],
-    ["Metodologia", project.methodology],
+    ["Metodología", project.methodology],
     ["Resultados", project.results],
     ["Lecciones aprendidas", project.lessons],
   ];
