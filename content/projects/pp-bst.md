@@ -74,6 +74,5 @@ Grafico patron sin marca
 La calidad del pipeline depende de pruebas simples, contratos de datos claros y monitoreo de volumenes.
 
 
-## Link para documento completo
+[Documento completo](https://repositorio.unal.edu.co/handle/unal/77014)
 
-https://repositorio.unal.edu.co/handle/unal/77014
