@@ -6,32 +6,74 @@ Se analiza un patrón puntual marcado de un bosque seco tropical, el cual es gen
 
 ## Problema
 
-La preparacion de datos consumia demasiado tiempo y generaba inconsistencias entre ejecuciones locales.
+La reducción y degradación de los bosques secos tropicales es una problematica ambiental alta, en Colombia originalmente existian alrededor de 8.8 millones de hectáreas, para el 2019 se redujo a un 22.5 % de esta área. La mayoria fue transformada en pastos para ganaderia (33.2 %) y tierras agrícolas (28.2 %), lo demás en áreas antropicas. Este tipo de ecosistema además de su importancia biologica, tiene varios beneficios como: suministro de alimentos y madera para las comunidades cercanas, servicios ambientales como la estabilización del suelo, el reciclaje de nutrientes y la regulación climática. De aqui la importancia de estudiar los bosques secos tropicales y su estructura espacial, para poder aportar en la conservación y restauración de este tipo de ecosistema. 
 
 ## Datos utilizados
 
 
 - Datos georreferenciados de las especies dentro de la parcela. 
-- Información cualitativa nombre de la especie
-- Información cuantitativa diametro a la altura del pecho de los arboles. 
+- Información cualitativa: nombre de la especie
+- Información cuantitativa: diametro a la altura del pecho de los árboles. 
 
-
-![Distribución de los árboles](/portafolio/content/projects/assets/pp-bst/map.png)
 
 ## Metodologia
 
-Se implementaron etapas de ingesta, normalizacion, deduplicacion, enriquecimiento espacial y exportacion a formatos analiticos.
+Se trabajó con diferentes herramientas de la teoría de procesos puntuales, utilizando la información de una parcela de una hectárea ubicada en el parque nacional natural El Tuparro en la Orinoquia Colombiana.
 
-| Etapa | Control | Resultado |
-| --- | --- | --- |
-| Ingesta | Volumenes esperados | Datos disponibles |
-| Limpieza | Duplicados y nulos | Base confiable |
-| Exportacion | Contratos de datos | Insumos modelables |
+![Distribución de los árboles](/portafolio/content/projects/assets/pp-bst/map.png)
+
+La metodología implementada se divide en tres partes: 
+
+1. El análisis de las intensidades (herramientas de primer orden)
+2. El análisis de las interacciones (herramientas de segundo orden)
+3. El análisis de los métodos de clasificación utilizados para agrupar las especies según su comportamiento espacial.
+
+El siguiente diagrama presenta las herramientas utilizadas en cada proceso. 
+
+![Metodologia](/portafolio/content/projects/assets/pp-bst/meto.png)
+
 
 ## Resultados
 
-El pipeline redujo reprocesos, estandarizo reglas de negocio y dejo salidas listas para modelamiento y visualizacion.
+### Intensidades
+
+Se construyó un modelo que busca analizar la intensidad de los patrones marcados por tamaño y para las principales especies encontradas, este modelo incluye la interacción de las especies con el suelo rocoso de la zona analizada. $ \alpha $
+
+$$
+\lambda(u) = b(u)\,e^{(\alpha + \beta Z(u))}
+$$
+
+
+| Category P.P. | alpha | beta | sig alpha | sig beta |
+|---------------|------:|-----:|:---------:|:--------:|
+| Unmarked      | -0.13 |  0.16 | *** | *** |
+| Large         | -0.08 |  0.10 |     |     |
+| Medium        | -0.19 |  0.21 | *   | *** |
+| Small         | -0.13 |  0.15 | **  | *** |
+| Attalea m.    | -0.04 |  0.05 |     |     |
+| Bactris b.    | -0.38 |  0.35 | **  | *** |
+| Eschweilera t.| -0.25 |  0.28 |     | **  |
+| Gustavia a.   | -0.11 |  0.13 |     |     |
+| Matayba sp    | -0.05 |  0.06 |     |     |
+| Protium g.    | -0.11 |  0.14 |     |     |
+| Pachira n.    |  0.29 | -0.53 |     |     |
+| Inga g.       | -0.28 |  0.26 |     | *   |
+| Morf sp4      | -0.42 |  0.44 |     | **  |
+
+Grafico patron sin marca
+
+### Interacciones
+
+
+
+### Clasificación
+
 
 ## Lecciones aprendidas
 
 La calidad del pipeline depende de pruebas simples, contratos de datos claros y monitoreo de volumenes.
+
+
+## Link para documento completo
+
+https://repositorio.unal.edu.co/handle/unal/77014
