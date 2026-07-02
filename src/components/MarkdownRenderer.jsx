@@ -1,3 +1,5 @@
+import { useEffect, useMemo, useRef } from "react";
+
 function escapeHtml(text) {
   return text
     .replace(/&/g, "&amp;")
@@ -49,7 +51,7 @@ function renderTable(lines) {
   `;
 }
 
-function MarkdownRenderer({ content }) {
+function renderMarkdown(content) {
   const lines = content.split("\n");
   const html = [];
   let listItems = [];
@@ -72,6 +74,17 @@ function MarkdownRenderer({ content }) {
       listItems.push(trimmed.slice(2));
       continue;
     }
+    if (trimmed === "$$") {
+      const mathLines = [];
+      index += 1;
+      while (index < lines.length && lines[index].trim() !== "$$") {
+        mathLines.push(lines[index]);
+        index += 1;
+      }
+      flushList();
+      html.push(`<div class="math-display">\\[${escapeHtml(mathLines.join("\n"))}\\]</div>`);
+      continue;
+    }
     if (trimmed.includes("|") && lines[index + 1] && isTableDivider(lines[index + 1])) {
       const tableLines = [line, lines[index + 1]];
       index += 2;
@@ -92,7 +105,40 @@ function MarkdownRenderer({ content }) {
   }
   flushList();
 
-  return <div className="markdown" dangerouslySetInnerHTML={{ __html: html.join("") }} />;
+  return html.join("");
+}
+
+function MarkdownRenderer({ content }) {
+  const containerRef = useRef(null);
+  const html = useMemo(() => renderMarkdown(content), [content]);
+
+  useEffect(() => {
+    let attempts = 0;
+    let timerId;
+
+    const typesetMath = () => {
+      attempts += 1;
+      const mathJax = window.MathJax;
+      if (mathJax?.typesetPromise && containerRef.current) {
+        mathJax.typesetClear?.([containerRef.current]);
+        mathJax.typesetPromise([containerRef.current]).catch(() => {});
+        return true;
+      }
+      return attempts >= 20;
+    };
+
+    if (!typesetMath()) {
+      timerId = window.setInterval(() => {
+        if (typesetMath()) window.clearInterval(timerId);
+      }, 250);
+    }
+
+    return () => {
+      if (timerId) window.clearInterval(timerId);
+    };
+  }, [html]);
+
+  return <div ref={containerRef} className="markdown" dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
 export default MarkdownRenderer;

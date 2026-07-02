@@ -533,6 +533,14 @@ code {
   max-width: 100%;
 }
 
+.math-display {
+  color: var(--text);
+  margin: 22px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 4px;
+}
+
 .markdown-table-wrap {
   overflow-x: auto;
 }

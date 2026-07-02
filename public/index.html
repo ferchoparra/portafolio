@@ -27,6 +27,24 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Luis Fernando Parra | Data Scientist & Geospatial Analytics</title>
     <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"]
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"]
+          ]
+        },
+        svg: {
+          fontCache: "global"
+        }
+      };
+    </script>
+    <script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script>
       (function () {
         var redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
