@@ -9,8 +9,6 @@ En Colombia en los procesos de actualización catastral se genera un proceso lla
 
 A partir de la capa que produce cada variable actualmente se genera una intercepción de estas para conformar una versión inicial de las zonas homogéneas físicas. Esto genera una gran cantidad de polígonos con características únicas pero con tamaños no representativos en el terreno; generando así una cantidad no manejable de zonas homogéneas físicas. 
 
-![Intersección variables](/portafolio/content/projects/assets/modelo-zonas-homogeneas-fisicas/zhf_ini.png)
-
 
 ## Datos utilizados
 
