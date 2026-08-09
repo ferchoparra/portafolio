@@ -52,17 +52,17 @@ const projects = [
     title: "Modelo de contabilidad de emisiones de carbono",
     file: "modelo-contabilidad-carbono.md",
     summary:
-      "Modelo de contabilidad de emisiones de carbono para los sectores de agricultura, silvicultura y otros usos de la tierra.",
-    technologies: ["R", "NDC", "BUR-Colombia"],
+      "Pipeline en R para estimar emisiones, absorciones y escenarios de mitigacion AFOLU integrando FAOSTAT, NIR/BUR, NDC, uso del suelo y demanda agropecuaria.",
+    technologies: ["R", "AFOLU", "FAOSTAT", "NDC", "BUR-Colombia", "Simulacion"],
     featured: true,
   },
   {
     slug: "bst-patrones-puntuales",
-    title: "Ánalisis de la estructura espacial de un bosque seco tropical mediante patrones puntuales",
+    title: "Analisis espacial de un bosque seco tropical con procesos puntuales",
     file: "pp-bst.md",
     summary:
-      "Se utilizan diferentes herramientas provenientes de la téoria de procesos puntuales, para analizar la estructura espacial de los árboles de un bosque seco tropical.",
-    technologies: ["R", "QGIS", "Tesis de maestria", "Patrones puntuales marcados"],
+      "Tesis de maestria en Estadistica aplicada al analisis de 1274 plantas en una parcela de bosque seco tropical mediante procesos puntuales marcados, funciones de segundo orden y clasificacion funcional.",
+    technologies: ["R", "Estadistica espacial", "Procesos puntuales", "FPCA", "Ecologia cuantitativa"],
     featured: true,
   },
   {
@@ -97,8 +97,8 @@ const projects = [
     title: "Modelo de crecimiento y rendimiento forestal",
     file: "modelo-forestal.md",
     summary:
-      "Modelo de crecimiento y rendimiento forestal, herramienta para la prospectiva del sector forestal comercial de Colombia.",
-    technologies: ["R", "ecuaciones alometricas", "modelos de ahusamiento", "sector forestal"],
+      "Herramienta de simulacion en R para estimar crecimiento, rendimiento y volumen disponible de plantaciones forestales comerciales en Colombia.",
+    technologies: ["R", "Weibull", "modelos de ahusamiento", "simulacion forestal"],
     featured: false,
   },
 ];
