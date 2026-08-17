@@ -2,25 +2,25 @@
 
 ## Resumen ejecutivo
 
-Modelos predictivos para anticipar rendimientos usando informacion climatica, historica y espacial.
+Modelos predictivos para anticipar rendimientos usando información climática, histórica y espacial.
 
 ## Problema
 
-Los rendimientos agricolas presentan autocorrelacion espacial y alta variabilidad temporal, lo que limita enfoques predictivos tradicionales.
+Los rendimientos agrícolas presentan autocorrelación espacial y alta variabilidad temporal, lo que limita enfoques predictivos tradicionales.
 
 ## Datos utilizados
 
-- Series historicas de rendimiento
-- Indices climaticos
+- Series históricas de rendimiento
+- Índices climáticos
 - Suelos
 - Altitud
 - Pendientes
 - Distancia a infraestructura
 - Variables de manejo
 
-## Metodologia
+## Metodología
 
-Se compararon modelos lineales, random forest, gradient boosting y validacion cruzada espacial para medir generalizacion fuera de la zona de entrenamiento.
+Se compararon modelos lineales, random forest, gradient boosting y validación cruzada espacial para medir generalizacion fuera de la zona de entrenamiento.
 
 | Modelo | Ventaja | Riesgo controlado |
 | --- | --- | --- |
@@ -30,8 +30,8 @@ Se compararon modelos lineales, random forest, gradient boosting y validacion cr
 
 ## Resultados
 
-El flujo permitio identificar variables dominantes y estimar incertidumbre predictiva por zona agroecologica.
+El flujo permitió identificar variables dominantes y estimar incertidumbre predictiva por zona agroecológica.
 
 ## Lecciones aprendidas
 
-La validacion aleatoria puede sobrestimar desempeno cuando existen patrones espaciales fuertes.
+La validación aleatoria puede sobrestimar desempeño cuando existen patrones espaciales fuertes.

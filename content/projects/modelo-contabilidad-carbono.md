@@ -2,69 +2,69 @@
 
 ## Resumen ejecutivo
 
-Pipeline analitico en R para estimar emisiones y absorciones de gases de efecto invernadero asociadas al sector agropecuario, forestal y de uso de la tierra. El modelo integra series historicas de produccion, comercio, consumo aparente, poblacion, PIB, coberturas, inventarios ganaderos, informacion forestal y factores de emision provenientes de fuentes como FAOSTAT, NIR/BUR y escenarios NDC.
+Pipeline analítico en R para estimar emisiones y absorciones de gases de efecto invernadero asociadas al sector agropecuario, forestal y de uso de la tierra. El modelo integra series históricas de producción, comercio, consumo aparente, población, PIB, coberturas, inventarios ganaderos, información forestal y factores de emisión provenientes de fuentes como FAOSTAT, NIR/BUR y escenarios NDC.
 
-El proyecto permite proyectar demanda agropecuaria hasta 2050, estimar requerimientos de area y animales, traducir esos cambios en categorias AFOLU y simular escenarios de mitigacion relacionados con rendimientos, ganaderia, manejo de pasturas, arroz, bosques naturales, plantaciones comerciales y cambios en consumo de carne.
+El proyecto permite proyectar demanda agropecuaria hasta 2050, estimar requerimientos de área y animales, traducir esos cambios en categorías AFOLU y simular escenarios de mitigación relacionados con rendimientos, ganadería, manejo de pasturas, arroz, bosques naturales, plantaciones comerciales y cambios en consumo de carne.
 
 ## Problema
 
-La contabilidad de emisiones AFOLU requiere conectar procesos que normalmente se analizan por separado: produccion agricola, inventarios pecuarios, comercio exterior, consumo, uso del suelo, crecimiento economico, poblacion y factores de emision. Sin una estructura reproducible, los resultados pueden depender de hojas de calculo manuales, supuestos dispersos y cruces poco trazables.
+La contabilidad de emisiones AFOLU requiere conectar procesos que normalmente se analizan por separado: producción agrícola, inventarios pecuarios, comercio exterior, consumo, uso del suelo, crecimiento económico, población y factores de emisión. Sin una estructura reproducible, los resultados pueden depender de hojas de cálculo manuales, supuestos dispersos y cruces poco trazables.
 
-El reto consistia en construir un flujo que permitiera:
+El reto consistía en construir un flujo que permitiera:
 
-- Consolidar fuentes heterogeneas de datos agropecuarios, forestales y climaticos.
-- Proyectar consumo y actividad productiva bajo escenarios economicos y demograficos.
-- Estimar areas requeridas, existencias animales y cambios de uso del suelo.
-- Aplicar factores de emision y absorcion por categoria AFOLU.
-- Comparar escenarios base, NDC y estrategias de mitigacion hacia 2050.
-- Generar salidas tabulares, graficas y reportes reproducibles.
+- Consolidar fuentes heterogéneas de datos agropecuarios, forestales y climáticos.
+- Proyectar consumo y actividad productiva bajo escenarios económicos y demográficos.
+- Estimar áreas requeridas, existencias animales y cambios de uso del suelo.
+- Aplicar factores de emisión y absorción por categoría AFOLU.
+- Comparar escenarios base, NDC y estrategias de mitigación hacia 2050.
+- Generar salidas tabulares, gráficas y reportes reproducibles.
 
 ## Datos utilizados
 
-- Produccion agricola FAOSTAT: area cosechada, produccion y rendimiento.
-- Produccion pecuaria FAOSTAT: animales en produccion, sacrificio, rendimiento y produccion.
-- Existencias ganaderas FAOSTAT para calcular inventarios y tasas de extraccion.
+- Producción agrícola FAOSTAT: área cosechada, producción y rendimiento.
+- Producción pecuaria FAOSTAT: animales en producción, sacrificio, rendimiento y producción.
+- Existencias ganaderas FAOSTAT para calcular inventarios y tasas de extracción.
 - Comercio exterior FAOSTAT: importaciones y exportaciones de cultivos, productos pecuarios y animales vivos.
-- Uso de la tierra e indicadores agroambientales: coberturas, tierras forestales, cultivos, pastizales y combustion de biomasa.
+- Uso de la tierra e indicadores agroambientales: coberturas, tierras forestales, cultivos, pastizales y combustión de biomasa.
 - Intensidad de emisiones agropecuarias por producto.
-- Emisiones de agricultura y uso de la tierra por categorias como fermentacion enterica, gestion de estiercol, cultivo de arroz, fertilizantes, residuos agricolas y suelos organicos.
-- Archivo de elasticidades, factores de conversion, grupos FAO/GCAM, poblacion, PIB y escenarios forestales.
-- Informacion NIR/BUR de Colombia para construir factores de emision, absorcion y costos-beneficios.
+- Emisiones de agricultura y uso de la tierra por categorías como fermentación entérica, gestión de estiércol, cultivo de arroz, fertilizantes, residuos agrícolas y suelos orgánicos.
+- Archivo de elasticidades, factores de conversión, grupos FAO/GCAM, población, PIB y escenarios forestales.
+- Información NIR/BUR de Colombia para construir factores de emisión, absorción y costos-beneficios.
 
-## Metodologia
+## Metodología
 
-El modelo se organizo como un pipeline modular con scripts independientes para adquisicion, curaduria, transformacion, simulacion, analisis y generacion de reportes.
+El modelo se organizo como un pipeline modular con scripts independientes para adquisición, curaduría, transformación, simulación, análisis y generación de reportes.
 
 | Etapa | Script | Proposito |
 | --- | --- | --- |
-| Adquisicion | `acquire_data.R` | Cargar fuentes FAOSTAT, NIR/BUR, elasticidades, factores de conversion, poblacion, PIB y escenarios forestales |
-| Curaduria | `curate_data.R` | Estandarizar variables, convertir unidades, calcular consumo aparente, inventarios, tasas de extraccion y factores de emision |
-| Transformacion | `transform_data.R` | Proyectar consumo, poblacion, PIB, elasticidades, areas requeridas y emisiones hasta 2050 |
-| Simulacion | `Sim_data.R` | Construir escenarios de mitigacion y generar salidas de emisiones, series y resultados |
-| Analisis | `analyze_data.R` | Explorar historicos, proyecciones, balances y graficas por cadena o categoria |
-| Reportes | `generate_reports.R` | Renderizar articulos, presentaciones, paginas e informes con R Markdown |
+| Adquisicion | `acquire_data.R` | Cargar fuentes FAOSTAT, NIR/BUR, elasticidades, factores de conversión, población, PIB y escenarios forestales |
+| Curaduria | `curate_data.R` | Estandarizar variables, convertir unidades, calcular consumo aparente, inventarios, tasas de extracción y factores de emisión |
+| Transformacion | `transform_data.R` | Proyectar consumo, población, PIB, elasticidades, áreas requeridas y emisiones hasta 2050 |
+| Simulación | `Sim_data.R` | Construir escenarios de mitigación y generar salidas de emisiones, series y resultados |
+| Análisis | `analyze_data.R` | Explorar históricos, proyecciones, balances y gráficas por cadena o categoría |
+| Reportes | `generate_reports.R` | Renderizar artículos, presentaciones, paginas e informes con R Markdown |
 
 ### Integracion de datos
 
-La primera parte del flujo carga bases de produccion, comercio, uso del suelo, emisiones, elasticidades y factores de conversion. Luego se armonizan codigos FAO, codigos internos de cultivo, grupos GCAM y categorias agropecuarias.
+La primera parte del flujo carga bases de producción, comercio, uso del suelo, emisiones, elasticidades y factores de conversión. Luego se armonizan códigos FAO, códigos internos de cultivo, grupos GCAM y categorías agropecuarias.
 
-En cultivos se consolidan area cosechada, produccion y rendimiento. En ganaderia se convierten productos derivados hacia unidades comparables, se seleccionan productos principales y se calculan animales en produccion, inventarios y tasas de extraccion.
+En cultivos se consolidan área cosechada, producción y rendimiento. En ganadería se convierten productos derivados hacia unidades comparables, se selecciónan productos principales y se calculan animales en producción, inventarios y tasas de extracción.
 
 ### Consumo aparente y proyecciones
 
-El modelo calcula consumo aparente integrando produccion, importaciones y exportaciones. Para proyectar demanda se prueban modelos de tendencia por producto, junto con trayectorias de poblacion y PIB.
+El modelo calcula consumo aparente integrando producción, importaciones y exportaciones. Para proyectar demanda se prueban modelos de tendencia por producto, junto con trayectorias de población y PIB.
 
 El flujo calcula elasticidades ingreso-demanda bajo varias trayectorias, incluyendo escenarios GCAM y NDC. Con estas elasticidades se estima la tasa de crecimiento del consumo y se construye una base proyectada entre 2014 y 2050.
 
-### Actividad, area requerida y frontera agropecuaria
+### Actividad, área requerida y frontera agropecuaria
 
-Con las proyecciones de produccion y rendimiento se estiman areas requeridas para cultivos. Para ganaderia se estiman animales totales, produccion, carga animal y area requerida. Estas variables alimentan una representacion de la frontera agropecuaria, especialmente para identificar presiones entre cultivos, pastizales y areas forestales.
+Con las proyecciones de producción y rendimiento se estiman áreas requeridas para cultivos. Para ganadería se estiman animales totales, producción, carga animal y área requerida. Estas variables alimentan una representación de la frontera agropecuaria, especialmente para identificar presiones entre cultivos, pastizales y áreas forestales.
 
-El modelo tambien incorpora escenarios forestales, incluyendo plantaciones comerciales y bosque natural, para representar cambios en areas forestales y su relacion con emisiones o absorciones.
+El modelo también incorpora escenarios forestales, incluyendo plantaciones comerciales y bosque natural, para representar cambios en áreas forestales y su relación con emisiones o absorciones.
 
-### Factores de emision y categorias AFOLU
+### Factores de emisión y categorías AFOLU
 
-A partir de la informacion BUR/NIR se construyen factores por animal o por area para:
+A partir de la información BUR/NIR se construyen factores por animal o por área para:
 
 - Absorciones de CO2.
 - Emisiones de CO2.
@@ -73,14 +73,14 @@ A partir de la informacion BUR/NIR se construyen factores por animal o por area 
 - Emisiones indirectas NOX.
 - Emisiones de CO.
 
-Estos factores se cruzan con la actividad proyectada y se organizan en categorias AFOLU como ganaderia, cultivos, tierras forestales, tierras de cultivo, pastizales, arroz, fertilizantes y manejo de pasturas.
+Estos factores se cruzan con la actividad proyectada y se organizan en categorías AFOLU como ganadería, cultivos, tierras forestales, tierras de cultivo, pastizales, arroz, fertilizantes y manejo de pasturas.
 
-### Escenarios de mitigacion
+### Escenarios de mitigación
 
-El script de simulacion define estrategias de analisis para evaluar cambios en emisiones frente a un escenario base. Entre las estrategias codificadas se encuentran:
+El script de simulación define estrategias de análisis para evaluar cambios en emisiones frente a un escenario base. Entre las estrategias codificadas se encuentran:
 
-- Incremento de rendimientos agricolas.
-- Aumento de animales por hectarea y mejoras en tasa de extraccion ganadera.
+- Incremento de rendimientos agrícolas.
+- Aumento de animales por hectárea y mejoras en tasa de extracción ganadera.
 - Reducciones asociadas a fuentes agregadas y emisiones no CO2.
 - Mejoramiento de pasturas.
 - Manejo de arroz.
@@ -91,36 +91,36 @@ El script de simulacion define estrategias de analisis para evaluar cambios en e
 
 ## Resultados
 
-El proyecto produjo una arquitectura reproducible para conectar demanda agroalimentaria, uso del suelo y contabilidad de emisiones. Las salidas permiten comparar trayectorias historicas y proyectadas, cuantificar emisiones netas y totales, y evaluar estrategias de mitigacion sobre categorias AFOLU.
+El proyecto produjo una arquitectura reproducible para conectar demanda agroalimentaria, uso del suelo y contabilidad de emisiones. Las salidas permiten comparar trayectorias históricas y proyectadas, cuantificar emisiones netas y totales, y evaluar estrategias de mitigación sobre categorías AFOLU.
 
-Los principales resultados tecnicos fueron:
+Los principales resultados técnicos fueron:
 
 - Construccion de una base consolidada de consumo aparente por producto.
-- Proyeccion de demanda agropecuaria hasta 2050 con poblacion, PIB y elasticidades.
-- Estimacion de area requerida para cultivos y ganaderia.
-- Calculo de inventarios animales, tasas de extraccion y productividad pecuaria.
+- Proyeccion de demanda agropecuaria hasta 2050 con población, PIB y elasticidades.
+- Estimacion de área requerida para cultivos y ganadería.
+- Calculo de inventarios animales, tasas de extracción y productividad pecuaria.
 - Integracion de escenarios forestales y cambios de uso del suelo.
-- Derivacion de factores de emision y absorcion desde informacion BUR/NIR.
-- Calculo de emisiones netas y totales por categoria, gas y ano.
-- Exportacion de escenarios en archivos Excel para analisis de resultados, NDC y costos-beneficios.
+- Derivacion de factores de emisión y absorción desde información BUR/NIR.
+- Calculo de emisiones netas y totales por categoría, gas y año.
+- Exportación de escenarios en archivos Excel para análisis de resultados, NDC y costos-beneficios.
 
-| Salida | Descripcion | Uso analitico |
+| Salida | Descripción | Uso analítico |
 | --- | --- | --- |
-| `BDConsumoFinal` | Consumo aparente historico por producto | Base para modelos de demanda |
-| `BDBalComFinal` | Produccion, comercio, consumo, rendimiento y area requerida | Balance agropecuario proyectado |
-| `BurEm` | Factores de emision y absorcion por categoria | Contabilidad AFOLU |
+| `BDConsumoFinal` | Consumo aparente histórico por producto | Base para modelos de demanda |
+| `BDBalComFinal` | Producción, comercio, consumo, rendimiento y área requerida | Balance agropecuario proyectado |
+| `BurEm` | Factores de emisión y absorción por categoría | Contabilidad AFOLU |
 | `Final_emi` | Emisiones y absorciones calculadas por actividad | Estimacion neta y total |
-| `todo_E`, `todo_S`, `NDC_E`, `NDC_S` | Escenarios integrados de emisiones y series | Comparacion de mitigacion |
+| `todo_E`, `todo_S`, `NDC_E`, `NDC_S` | Escenarios integrados de emisiones y series | Comparación de mitigación |
 
 ## Lecciones aprendidas
 
-La contabilidad de carbono en AFOLU exige tanta rigurosidad en la preparacion de datos como en el calculo final de emisiones. Pequenas decisiones sobre unidades, factores de conversion, inventarios animales o areas base pueden cambiar de forma importante los resultados agregados.
+La contabilidad de carbono en AFOLU exige tanta rigurosidad en la preparación de datos como en el cálculo final de emisiones. Pequeñas decisiones sobre unidades, factores de conversión, inventarios animales o áreas base pueden cambiar de forma importante los resultados agregados.
 
-Tambien fue clave separar el flujo en etapas. La arquitectura por scripts permite depurar cada componente: datos originales, bases curadas, proyecciones, factores de emision, escenarios y reportes. Esto mejora la trazabilidad de supuestos y facilita actualizar el modelo cuando cambian fuentes, factores o escenarios de politica.
+También fue clave separar el flujo en etapas. La arquitectura por scripts permite depurar cada componente: datos originales, bases curadas, proyecciones, factores de emisión, escenarios y reportes. Esto mejora la trazabilidad de supuestos y facilita actualizar el modelo cuando cambian fuentes, factores o escenarios de política.
 
-Desde el punto de vista analitico, el proyecto muestra que las estrategias de mitigacion no deben evaluarse aisladamente. Los cambios en consumo, productividad, uso del suelo, bosque natural y plantaciones comerciales interactuan entre si, por lo que el valor del modelo esta en comparar escenarios completos y no solo indicadores individuales.
+Desde el punto de vista analítico, el proyecto muestra que las estrategias de mitigación no deben evaluarse aisladamente. Los cambios en consumo, productividad, uso del suelo, bosque natural y plantaciones comerciales interactúan entre sí, por lo que el valor del modelo está en comparar escenarios completos y no solo indicadores individuales.
 
-## Tecnologias y metodos
+## Tecnologías y métodos
 
 - R
 - FAOSTAT
@@ -129,10 +129,10 @@ Desde el punto de vista analitico, el proyecto muestra que las estrategias de mi
 - AFOLU
 - Modelos de tendencia
 - Elasticidades ingreso-demanda
-- Factores de emision
-- Simulacion de escenarios
+- Factores de emisión
+- Simulación de escenarios
 - `readxl`, `openxlsx`, `dplyr`, `reshape2`, `ggplot2`, `rmarkdown`
 
 ## Nota
 
-Proyecto desarrollado a partir de los scripts ubicados en `public/content/projects/assets/ddplac`. La implementacion corresponde a un flujo analitico para modelar emisiones, absorciones y escenarios de mitigacion del sector agropecuario, forestal y de uso de la tierra.
+Proyecto desarrollado a partir de los scripts ubicados en `public/content/projects/assets/ddplac`. La implementación corresponde a un flujo analítico para modelar emisiones, absorciones y escenarios de mitigación del sector agropecuario, forestal y de uso de la tierra.

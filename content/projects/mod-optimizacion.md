@@ -1,12 +1,12 @@
-# Modelo de optimizacion para la produccion agropecuaria
+# Modelo de optimización para la producción agropecuaria
 
 ## Resumen ejecutivo
 
-Arquitectura para transformar y analizar grandes volumenes de datos espaciales con formatos columnares.
+Arquitectura para transformar y analizar grandes volúmenes de datos espaciales con formatos columnares.
 
 ## Problema
 
-Los procesos espaciales en escritorio no escalaban para millones de geometrias y multiples cruces territoriales.
+Los procesos espaciales en escritorio no escalaban para millones de geometrías y múltiples cruces territoriales.
 
 ## Datos utilizados
 
@@ -16,11 +16,11 @@ Los procesos espaciales en escritorio no escalaban para millones de geometrias y
 - Sensores remotos derivados
 - Tablas de atributos
 
-## Metodologia
+## Metodología
 
 Se particionaron datos con GeoParquet, se optimizaron joins espaciales y se diseno un flujo distribuido con controles de calidad por lote.
 
-| Decision | Implementacion | Beneficio |
+| Decision | Implementación | Beneficio |
 | --- | --- | --- |
 | Formato columnar | GeoParquet | Lecturas selectivas |
 | Particionamiento | Variables de consulta | Menor costo de proceso |
@@ -28,7 +28,7 @@ Se particionaron datos con GeoParquet, se optimizaron joins espaciales y se dise
 
 ## Resultados
 
-El procesamiento paso de ejecuciones manuales extensas a pipelines repetibles con menor tiempo de ejecucion y mejor trazabilidad.
+El procesamiento paso de ejecuciones manuales extensas a pipelines repetibles con menor tiempo de ejecución y mejor trazabilidad.
 
 ## Lecciones aprendidas
 
