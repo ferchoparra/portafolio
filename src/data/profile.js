@@ -1,4 +1,4 @@
-// Personaliza aqui tus enlaces reales, correo y ruta final del CV.
+// Personaliza aquí tus enlaces reales, correo y ruta final del CV.
 const profile = {
   name: "Luis Fernando Parra",
   titleLines: ["Forest Engineer", "Statistician", "Data Scientist", "Geospatial Analytics"],
@@ -7,7 +7,7 @@ const profile = {
   linkedinUrl: "https://www.linkedin.com/in/luis-fernando-parra-camacho/",
   cvUrl: `${process.env.PUBLIC_URL}/assets/cv/luis-fernando-parra-cv.pdf`,
   description:
-    "Ingeniero forestal, especialista y magister en Estadística, enfocado en ciencia de datos, machine learning y analitica espacial. Desarrollo modelos reproducibles y pipelines de datos para convertir informacion territorial, ambiental y productiva en decisiones medibles.",
+    "Ingeniero forestal, especialista y magíster en Estadística, enfocado en ciencia de datos, machine learning y analítica espacial. Desarrollo modelos reproducibles y pipelines de datos para convertir información territorial, ambiental y productiva en decisiones medibles.",
 };
 
 export default profile;

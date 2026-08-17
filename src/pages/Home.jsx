@@ -5,13 +5,12 @@ import SkillCard from "../components/SkillCard";
 import Timeline from "../components/Timeline";
 import experience from "../data/experience";
 import profile from "../data/profile";
-import projects from "../data/projects";
+import { featuredProjects } from "../data/projects";
 import skillGroups, { coreTechnologies } from "../data/skills";
 import usePageTitle from "../utils/usePageTitle";
 
 function Home() {
   usePageTitle("Luis Fernando Parra | Data Scientist & Geospatial Analytics");
-  const featuredProjects = projects.filter((project) => project.featured);
 
   return (
     <>
@@ -19,8 +18,8 @@ function Home() {
 
       <section className="section-shell section-block tech-strip" aria-labelledby="tech-title">
         <div className="section-heading">
-          <p className="eyebrow">Tecnologias principales</p>
-          <h2 id="tech-title">Stack para estadistica, ML y GIS</h2>
+          <p className="eyebrow">Tecnologías principales</p>
+          <h2 id="tech-title">Stack para estadística, ML y GIS</h2>
         </div>
         <div className="tech-grid">
           {coreTechnologies.map((technology) => (
@@ -31,19 +30,19 @@ function Home() {
 
       <section id="about" className="section-shell section-block split-layout">
         <div className="section-heading">
-          <p className="eyebrow">Sobre mi</p>
+          <p className="eyebrow">Sobre mí</p>
           <h2>Perfil profesional</h2>
         </div>
         <div className="prose">
           <p>
             Soy ingeniero forestal con formación de posgrado en Estadística y experiencia
-            desarrollando modelos estadisticos (énfasis en estadística espacial), modelos de machine learning, y flujos o pipelines
-            para generar soluciones de analitica espacial.
+            desarrollando modelos estadísticos, con énfasis en estadística espacial, modelos de
+            machine learning y flujos de datos para generar soluciones de analítica espacial.
           </p>
           <p>
-            Mi trabajo conecta datos, territorio y decision: desde la preparación de datos
-            con R, Python, SQL y Spark hasta la comunicacion de resultados mediante mapas,
-            dashboards Shiny y visualizaciones técnicas.
+            Mi trabajo conecta datos, territorio y decisión: desde la preparación de datos con R,
+            Python, SQL y Spark hasta la comunicación de resultados mediante mapas, dashboards
+            Shiny y visualizaciones técnicas.
           </p>
         </div>
       </section>
@@ -83,10 +82,8 @@ function Home() {
       <section id="cv" className="section-shell section-block cv-band">
         <div>
           <p className="eyebrow">CV</p>
-          <h2>Curriculum profesional</h2>
-          <p>
-            
-          </p>
+          <h2>Currículum profesional</h2>
+          <p>Versión PDF actualizada para postulaciones, convocatorias y oportunidades laborales.</p>
         </div>
         <a className="button primary" href={profile.cvUrl} download>
           <Download size={18} />

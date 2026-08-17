@@ -7,7 +7,7 @@ function Hero() {
   return (
     <section className="hero section-shell">
       <div className="hero-content">
-        <p className="eyebrow">Estadistica aplicada, ML y analitica geoespacial</p>
+        <p className="eyebrow">Estadística aplicada, ML y analítica geoespacial</p>
         <h1>{profile.name}</h1>
         <div className="hero-title" aria-label={profile.titleLines.join(", ")}>
           {profile.titleLines.map((line) => (

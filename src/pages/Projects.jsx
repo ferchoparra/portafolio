@@ -1,5 +1,5 @@
 import ProjectCard from "../components/ProjectCard";
-import projects from "../data/projects";
+import { publishedProjects } from "../data/projects";
 import usePageTitle from "../utils/usePageTitle";
 
 function Projects() {
@@ -8,7 +8,7 @@ function Projects() {
   return (
     <section className="section-shell page-block">
       <div className="section-heading">
-        <p className="eyebrow">Portafolio tecnico</p>
+        <p className="eyebrow">Portafolio técnico</p>
         <h1>Proyectos de Data Science, ML y GIS</h1>
         <p>
           Casos estructurados con problema, datos, metodología, tecnologías, resultados y
@@ -16,7 +16,7 @@ function Projects() {
         </p>
       </div>
       <div className="projects-grid">
-        {projects.map((project) => (
+        {publishedProjects.map((project) => (
           <ProjectCard project={project} key={project.slug} />
         ))}
       </div>

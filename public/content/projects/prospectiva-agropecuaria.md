@@ -2,11 +2,11 @@
 
 ## Resumen ejecutivo
 
-Aplicacion analitica en Shiny para explorar indicadores estadisticos y mapas interactivos.
+Aplicacion analítica en Shiny para explorar indicadores estadísticos y mapas interactivos.
 
 ## Problema
 
-Los equipos tecnicos necesitaban consultar indicadores, filtros y mapas sin depender de notebooks o consultas manuales.
+Los equipos técnicos necesitaban consultar indicadores, filtros y mapas sin depender de notebooks o consultas manuales.
 
 ## Datos utilizados
 
@@ -15,20 +15,20 @@ Los equipos tecnicos necesitaban consultar indicadores, filtros y mapas sin depe
 - Capas espaciales simplificadas
 - Resultados de modelos
 
-## Metodologia
+## Metodología
 
 Se diseno una interfaz modular con filtros reactivos, visualizaciones comparativas y mapas para lectura territorial.
 
 | Vista | Pregunta que responde | Usuario |
 | --- | --- | --- |
-| Indicadores | Como cambia el desempeno | Analista |
+| Indicadores | Como cambia el desempeño | Analista |
 | Mapa | Donde se concentra el fenomeno | Equipo territorial |
 | Comparativos | Que escenario conviene revisar | Coordinacion |
 
 ## Resultados
 
-La herramienta facilito exploracion de datos, comunicacion de hallazgos y revision de resultados por actores no tecnicos.
+La herramienta facilito exploracion de datos, comunicacion de hallazgos y revisión de resultados por actores no técnicos.
 
 ## Lecciones aprendidas
 
-Un dashboard util no solo muestra graficas: debe responder preguntas operativas concretas.
+Un dashboard util no solo muestra gráficas: debe responder preguntas operativas concretas.

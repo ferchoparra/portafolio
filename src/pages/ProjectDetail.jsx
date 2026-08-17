@@ -2,13 +2,13 @@ import { ArrowLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import MarkdownRenderer from "../components/MarkdownRenderer";
-import projects from "../data/projects";
+import { publishedProjects } from "../data/projects";
 import routes from "../routes";
 import usePageTitle from "../utils/usePageTitle";
 
 function ProjectDetail() {
   const { slug } = useParams();
-  const project = projects.find((item) => item.slug === slug);
+  const project = publishedProjects.find((item) => item.slug === slug);
   const [content, setContent] = useState("");
 
   usePageTitle(project ? `${project.title} | Proyecto` : "Proyecto no encontrado");

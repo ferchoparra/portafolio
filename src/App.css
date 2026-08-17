@@ -271,6 +271,34 @@ code {
   line-height: 1.7;
 }
 
+.hero-description,
+.hero-panel p,
+.prose p,
+.section-heading p,
+.project-card p,
+.blog-card p,
+.detail-section p,
+.article-header p,
+.timeline-card p,
+.cv-band p,
+.markdown p,
+.markdown li {
+  hyphens: auto;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.eyebrow,
+.card-kicker,
+.tag,
+.tech-grid span,
+.contact-card span,
+.footer,
+.markdown th,
+.markdown td {
+  text-align: initial;
+}
+
 .hero-panel dl {
   display: grid;
   gap: 14px;

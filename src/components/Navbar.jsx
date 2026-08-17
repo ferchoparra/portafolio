@@ -1,21 +1,22 @@
 import { NavLink } from "react-router-dom";
+import features from "../config/features";
 import routes from "../routes";
 import ThemeToggle from "./ThemeToggle";
 
 function Navbar() {
   return (
     <header className="site-header">
-      <nav className="navbar section-shell" aria-label="Navegacion principal">
+      <nav className="navbar section-shell" aria-label="Navegación principal">
         <NavLink className="brand" to={routes.home}>
           <span className="brand-mark">LP</span>
           <span>Luis Fernando Parra</span>
         </NavLink>
 
         <div className="nav-links">
-          <NavLink to="/#about">Sobre mi</NavLink>
+          <NavLink to="/#about">Sobre mí</NavLink>
           <NavLink to="/#experience">Experiencia</NavLink>
           <NavLink to={routes.projects}>Proyectos</NavLink>
-          <NavLink to={routes.blog}>Blog Tecnico</NavLink>
+          {features.blog && <NavLink to={routes.blog}>Blog Técnico</NavLink>}
           <NavLink to="/#cv">CV</NavLink>
           <NavLink to={routes.contact}>Contacto</NavLink>
         </div>

@@ -5,15 +5,15 @@ import routes from "../routes";
 import usePageTitle from "../utils/usePageTitle";
 
 function Blog() {
-  usePageTitle("Blog Tecnico | Luis Fernando Parra");
+  usePageTitle("Blog Técnico | Luis Fernando Parra");
 
   return (
     <section className="section-shell page-block">
       <div className="section-heading">
-        <p className="eyebrow">Blog tecnico</p>
-        <h1>Notas sobre estadistica, ML, GIS y Big Data</h1>
+        <p className="eyebrow">Blog técnico</p>
+        <h1>Notas sobre estadística, ML, GIS y Big Data</h1>
         <p>
-          Articulos en Markdown pensados para documentar criterios tecnicos, decisiones de
+          Artículos en Markdown pensados para documentar criterios técnicos, decisiones de
           modelamiento y aprendizajes profesionales.
         </p>
       </div>
@@ -35,7 +35,7 @@ function Blog() {
               </div>
             </div>
             <Link className="text-link" to={routes.blogDetail(post.slug)}>
-              Leer articulo <ArrowUpRight size={16} />
+              Leer artículo <ArrowUpRight size={16} />
             </Link>
           </article>
         ))}

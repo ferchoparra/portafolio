@@ -1,10 +1,10 @@
-// Cada articulo apunta a un archivo Markdown servido desde public/content/blog.
+// Cada artículo apunta a un archivo Markdown servido desde public/content/blog.
 const blogPosts = [
   {
     slug: "optimizacion-geoparquet-analisis-espacial",
-    title: "Optimizacion de GeoParquet para analisis espacial",
+    title: "Optimización de GeoParquet para análisis espacial",
     excerpt:
-      "Buenas practicas para particionar, comprimir y consultar datos espaciales columnares en flujos analiticos.",
+      "Buenas prácticas para particionar, comprimir y consultar datos espaciales columnares en flujos analíticos.",
     date: "2026-06-01",
     readTime: "7 min",
     tags: ["GeoParquet", "GIS", "Big Data"],
@@ -12,17 +12,17 @@ const blogPosts = [
   },
   {
     slug: "validacion-cruzada-espacial-modelos-predictivos",
-    title: "Validacion cruzada espacial en modelos predictivos",
+    title: "Validación cruzada espacial en modelos predictivos",
     excerpt:
-      "Por que la validacion aleatoria puede ser optimista en datos espaciales y como evaluar generalizacion territorial.",
+      "Por qué la validación aleatoria puede ser optimista en datos espaciales y cómo evaluar generalización territorial.",
     date: "2026-06-02",
     readTime: "8 min",
-    tags: ["Geoestadistica", "Machine Learning", "Validacion"],
+    tags: ["Geoestadística", "Machine Learning", "Validación"],
     file: "validacion-cruzada-espacial-modelos-predictivos.md",
   },
   {
     slug: "introduccion-pyspark-procesamiento-geoespacial",
-    title: "Introduccion a PySpark para procesamiento geoespacial",
+    title: "Introducción a PySpark para procesamiento geoespacial",
     excerpt:
       "Conceptos clave para llevar procesos geoespaciales desde scripts locales hacia pipelines distribuidos.",
     date: "2026-06-03",

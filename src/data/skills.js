@@ -1,19 +1,19 @@
 const skillGroups = [
   {
-    title: "Estadistica y ML",
-    skills: ["Modelos estadisticos", "Machine Learning", "Validacion cruzada", "Series y prediccion", "Inferencia"],
+    title: "Estadística y ML",
+    skills: ["Modelos estadísticos", "Machine Learning", "Validación cruzada", "Series y predicción", "Inferencia"],
   },
   {
-    title: "Estadística Espacial",
-    skills: ["Geoestadística", "Lattice - Modelos de Área", "Patrones puntuales", "Teoría de Grafos", "GIS", "GeoParquet"],
+    title: "Estadística espacial",
+    skills: ["Geoestadística", "Lattice - Modelos de área", "Patrones puntuales", "Teoría de grafos", "GIS", "GeoParquet"],
   },
   {
-    title: "Programacion y Manejo de Datos",
+    title: "Programación y manejo de datos",
     skills: ["R", "Python", "Spark", "SQL", "PostGIS", "Parquet", "Git", "Pipelines reproducibles"],
   },
   {
-    title: "Visualizacion",
-    skills: ["Dashboards", "Mapas interactivos", "Storytelling con datos", "Reportes tecnicos", "Shiny", "PowerBi"],
+    title: "Visualización",
+    skills: ["Dashboards", "Mapas interactivos", "Storytelling con datos", "Reportes técnicos", "Shiny", "Power BI"],
   },
 ];
 
