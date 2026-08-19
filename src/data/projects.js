@@ -80,10 +80,10 @@ const projects = [
     title: "Modelo de regionalización",
     file: "mod-regionalizacion.md",
     summary:
-      "Modelo de clasificación a partir de herramientas de teoría de grafos, basado en información de cadenas agropecuarias.",
-    technologies: ["R", "QGIS", "Teoría de grafos", "Procedimiento SKATER"],
+      "Metodología para regionalizar cadenas agropecuarias mediante clustering no espacial, matriz de vecindad, SKATER y ajuste experto.",
+    technologies: ["R", "sf", "spdep", "bigDM", "SKATER", "Estadística espacial"],
     featured: true,
-    published: false,
+    published: true,
   },
   {
     slug: "mod-optimizacion",
@@ -100,8 +100,8 @@ const projects = [
     title: "Prospectiva agropecuaria",
     file: "prospectiva-agropecuaria.md",
     summary:
-      "Sistema de modelación para cadenas agropecuarias: proyecciones económicas, modelo de equilibrio parcial y modelo de optimización con enfoque en prospectiva cuantitativa.",
-    technologies: ["R", "GAMS", "Series de tiempo", "Modelos de optimización", "Prospectiva cuantitativa"],
+      "Sistema de modelación económica para apoyar la prospectiva de cadenas agropecuarias en POP mediante proyecciones, equilibrio parcial y optimización regional.",
+    technologies: ["R", "GAMS", "Equilibrio parcial", "Optimización regional", "Prospectiva cuantitativa"],
     featured: false,
     published: false,
   },
@@ -112,7 +112,7 @@ const projects = [
     summary:
       "Herramienta de simulación en R para estimar crecimiento, rendimiento y volumen disponible de plantaciones forestales comerciales en Colombia.",
     technologies: ["R", "Weibull", "Modelos de ahusamiento", "Simulación forestal"],
-    featured: false,
+    featured: true,
     published: true,
   },
 ];
