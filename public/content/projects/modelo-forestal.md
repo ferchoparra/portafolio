@@ -1,8 +1,8 @@
-# Modelo de crecimiento y rendimiento forestal
+# Modelo de crecimiento y rendimiento forestal - MCRF
 
 ## Resumen ejecutivo
 
-Herramienta de simulación en R para estimar crecimiento, rendimiento y volumen disponible de plantaciones forestales comerciales en Colombia. El modelo fue desarrollado como componente técnico del Modelo de Simulación Forestal Comercial (MSFC), integrando tablas de crecimiento, ecuaciones dasométricas, esquemas de manejo silvicultural y proyecciones por registro de plantación.
+Herramienta de simulación en R para estimar crecimiento, rendimiento y volumen disponible de plantaciones forestales comerciales en Colombia. El modelo fue desarrollado como componente técnico del Modelo del Sector Forestal Colombia (MSFC), integrando tablas de crecimiento, ecuaciones dasométricas, esquemas de manejo silvicultural y proyecciones por registro de plantación.
 
 El proyecto consolida una estructura de modelación en tres procesos: selección y preparación de registros, transformación de tablas de crecimiento a clases diamétricas, y simulación temporal de volumen disponible por especie, zona, departamento, municipio e índice de sitio.
 
@@ -29,7 +29,7 @@ El reto consistía en construir una herramienta reproducible que permitiera:
 
 ## Metodología
 
-La metodología se implementó en R y se estructuró en tres procesos operativos, coherentes con la herramienta descrita en el documento técnico del MCRF.
+La metodología se implementó en R y se estructuró en tres procesos operativos:
 
 | Proceso | Objetivo | Implementación |
 | --- | --- | --- |
@@ -97,7 +97,7 @@ Los principales resultados técnicos fueron:
 | `volRaleoCR_2021` | Volumen de raleo con resiembra | Simular continuidad productiva |
 | `volAproCR_2021` | Volumen de aprovechamiento con resiembra | Analizar escenarios de producción sostenida |
 
-El documento técnico concluye que la herramienta permite generar escenarios dónde el usuario puede modificar área sembrada, especies, índices de sitio, volumen por índices de utilización y salidas por nucleos forestales, departamentos y especies.
+La herramienta construida permite generar escenarios dónde el usuario puede modificar área sembrada, especies, índices de sitio, volumen por índices de utilización y salidas por nucleos forestales, departamentos y especies.
 
 ## Lecciones aprendidas
 
@@ -120,4 +120,4 @@ Desde el punto de vista de implementación, la herramienta quedo preparada para 
 
 ## Nota
 
-Proyecto desarrollado a partir del documento técnico "Modelo de crecimiento y rendimiento forestal - MCRF" y los scripts R de implementación ubicados en `public/content/projects/assets/mcrf`.
+Proyecto desarrollado en el marco de un contrato suscrito con la Unidad de Planificación Rural Agropecuaria (UPRA).

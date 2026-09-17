@@ -2,9 +2,9 @@
 
 ## Resumen ejecutivo
 
-Sistema de modelación económica desarrollado para apoyar cuantitativamente los ejercicios de prospectiva de cadenas agropecuarias trabajadas por la UPRA en el marco de los Planes de Ordenamiento Productivo (POP). El sistema articula proyecciones económicas, modelos de equilibrio parcial y modelos de optimización regional para analizar escenarios de mediano y largo plazo sobre demanda, oferta, mercado y localización óptima de la producción.
+Sistema de modelación económica desarrollado para apoyar cuantitativamente los ejercicios de prospectiva de cadenas agropecuarias trabajadas por la UPRA en el marco de los Planes de Ordenamiento Productivo (POP). El sistema articula proyecciones económicas, modelos de equilibrio parcial y modelos de optimización regional para analizar escenarios de largo plazo sobre demanda, oferta, mercado y localización óptima de la producción.
 
-La metodología fue aplicada a cadenas como maíz, papa, caña panelera, acuicultura, cacao, café, cebolla, ganadería bovina y ovino-caprina. El documento revisado corresponde a la cadena de cacao y chocolate, pero su primer capítulo describe la arquitectura metodológica común para las cadenas priorizadas.
+La metodología fue aplicada a las cadenas: arroz, maíz, papa, caña panelera, acuicultura, cacao, café, cebolla, ganadería bovina y ovino-caprina. El documento revisado corresponde a la cadena de cacao y chocolate, pero su primer capítulo describe la arquitectura metodológica común para las cadenas priorizadas.
 
 ## Problema
 

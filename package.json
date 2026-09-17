@@ -16,6 +16,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "cv:preview": "node scripts/generate-cv.cjs --html",
+    "cv:pdf": "node scripts/generate-cv.cjs",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

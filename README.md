@@ -1,3 +1,7 @@
+# CV editable
+
+Edita el contenido en [`cv/cv.md`](cv/cv.md), ejecuta `npm run cv:preview` para revisarlo o `npm run cv:pdf` para actualizar el PDF del portafolio. Consulta [las instrucciones completas](cv/README.md).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

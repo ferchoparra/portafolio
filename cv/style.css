@@ -1,0 +1,21 @@
+@page { size: A4; margin: 16mm 18mm; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #24313b; font: 10pt/1.42 Arial, sans-serif; }
+main { max-width: 174mm; margin: auto; }
+h1 { color: #164c49; font-size: 27pt; line-height: 1.15; margin: 0 0 6mm; }
+h2 { color: #164c49; font-size: 12pt; text-transform: uppercase; letter-spacing: .8px; border-bottom: 1px solid #a8beba; padding-bottom: 2mm; margin: 6mm 0 3mm; break-after: avoid; }
+h3 { font-size: 10.5pt; margin: 4mm 0 1.5mm; break-after: avoid; }
+p { margin: 0 0 2.5mm; orphans: 3; widows: 3; }
+.profile-text { text-align: justify; }
+ul { margin: 1mm 0 3mm; padding-left: 5mm; }
+li { margin-bottom: 1.5mm; orphans: 3; widows: 3; }
+.page + .page { break-before: page; }
+.page > :first-child { margin-top: 0; }
+.toolbar { padding: 12px; background: #164c49; color: white; text-align: center; font: 14px Arial, sans-serif; }
+button { margin-left: 12px; padding: 8px 16px; cursor: pointer; }
+@media screen {
+  body { background: #e8edec; }
+  main { max-width: 210mm; }
+  .page { background: white; padding: 16mm 18mm; margin: 8mm 0; box-shadow: 0 2px 12px #0002; }
+}
+@media print { .toolbar { display: none; } }

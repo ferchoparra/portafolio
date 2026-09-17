@@ -103,7 +103,7 @@ const projects = [
       "Sistema de modelación económica para apoyar la prospectiva de cadenas agropecuarias en POP mediante proyecciones, equilibrio parcial y optimización regional.",
     technologies: ["R", "GAMS", "Equilibrio parcial", "Optimización regional", "Prospectiva cuantitativa"],
     featured: false,
-    published: false,
+    published: true,
   },
   {
     slug: "modelo-forestal",
