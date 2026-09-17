@@ -1,5 +1,5 @@
-Coloca aqui tu CV final con el nombre:
+El archivo `luis-fernando-parra-cv.pdf` está enlazado desde `src/data/profile.js`.
 
-luis-fernando-parra-cv.pdf
+Para editar su contenido, modifica `cv/cv.md` en la raíz del repositorio y ejecuta `npm run cv:pdf`.
 
-La ruta ya esta configurada en src/data/profile.js.
+Consulta [las instrucciones del CV editable](../../../cv/README.md).
