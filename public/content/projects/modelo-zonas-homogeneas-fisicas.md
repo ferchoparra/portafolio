@@ -12,7 +12,7 @@ A partir de la capa que produce cada variable actualmente se genera una intersec
 
 ## Datos utilizados
 
-- Capas de variables para definir las zonas homogéneas físicas rurales
+- Capas de variables para definir las zonas homogéneas físicas rurales:
     - Áreas homogéneas de tierra
     - Disponibilidad de agua
     - Influencia vial
@@ -35,7 +35,7 @@ Se realizó un proceso de validación sobre municipios que contaban con todo el 
 
 ## Resultados
 
-Se implementó la metodología y validación en 24 municipios de diferentes departamentos del país. La siguiente imagen presenta los resultados para el municipio La Capilla ubicado en el departamento de Boyacá, se presenta la intersección, las zonas generadas por la metodología y las zonas físicas generadas en su momento por el proceso de actualización. La métrica para este municipio se reportó en 75.7 % de áreas homogéneas entre la metodología y las zonas de la actualización. 
+Se implementó la metodología y validación en 24 municipios de diferentes departamentos del país. La siguiente imagen presenta los resultados para el municipio La Capilla ubicado en el departamento de Boyacá, se presenta: la intersección; las zonas generadas por la metodología; y las zonas físicas generadas en su momento por el proceso de actualización. La métrica para este municipio se reportó en 75.7 % de áreas homogéneas entre la metodología y las zonas de la actualización. 
 
 ![validación](/portafolio/content/projects/assets/modelo-zonas-homogeneas-fisicas/results.png)
 
@@ -72,10 +72,10 @@ La siguiente tabla presenta la métrica obtenida para cada uno de los 24 municip
 
 ## Lecciones aprendidas
 
-La propuesta implementada es una versión inicial que ya está teniendo buenos resultados, sin embargo, es necesario trabajar en varios aspectos para mejorarla: revisar los procesos de construcción de las variables originales en dónde se pueden estar generando polígonos muy pequeños que aumentar los polígonos de la intersección y vuelven más complejo generar las zonas finales; trabajar sobre la contrucción de la matriz de datos utilizando diferentes técnicas que permitan integrar datos cualitativos dentro de este tipo de procedimiento SKATER. 
+La propuesta implementada es una versión inicial que ya está teniendo buenos resultados, sin embargo, es necesario trabajar en varios aspectos para mejorarla: revisar los procesos de construcción de las variables originales en dónde se pueden estar generando polígonos muy pequeños que aumentan los polígonos de la intersección y vuelven más complejo generar las zonas finales; trabajar sobre la contrucción de la matriz de datos utilizando diferentes técnicas que permitan integrar datos cualitativos dentro de este tipo de procedimiento SKATER. 
 
 Finalmente resaltar que el aporte del experto tematico es vital para diseñar e implementar este tipo de metodologías que buscan facilitar el trabajo de ellos, a partir del análisis de la información. 
 
 
 ## Nota: 
-El proyecto se desarrollo bajo un contrato ejecutado con el Instituto Geográfico Agustín Codazzi - IGAC.  
+Proyecto desarrollado en el marco de un contrato suscrito con el Instituto Geográfico Agustín Codazzi - IGAC.  

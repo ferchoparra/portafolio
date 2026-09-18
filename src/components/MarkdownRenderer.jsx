@@ -51,6 +51,28 @@ function renderTable(lines) {
   `;
 }
 
+function renderList(items) {
+  const roots = [];
+  const stack = [];
+
+  items.forEach(({ indent, text }) => {
+    const item = { indent, text, children: [] };
+    while (stack.length && stack[stack.length - 1].indent >= indent) {
+      stack.pop();
+    }
+    const siblings = stack.length ? stack[stack.length - 1].children : roots;
+    siblings.push(item);
+    stack.push(item);
+  });
+
+  const renderItems = (siblings) =>
+    `<ul>${siblings.map((item) =>
+      `<li>${parseInline(item.text)}${item.children.length ? renderItems(item.children) : ""}</li>`
+    ).join("")}</ul>`;
+
+  return renderItems(roots);
+}
+
 function renderMarkdown(content) {
   const lines = content.split("\n");
   const html = [];
@@ -58,7 +80,7 @@ function renderMarkdown(content) {
 
   const flushList = () => {
     if (listItems.length > 0) {
-      html.push(`<ul>${listItems.map((item) => `<li>${parseInline(item)}</li>`).join("")}</ul>`);
+      html.push(renderList(listItems));
       listItems = [];
     }
   };
@@ -71,7 +93,8 @@ function renderMarkdown(content) {
       continue;
     }
     if (trimmed.startsWith("- ")) {
-      listItems.push(trimmed.slice(2));
+      const indentation = line.match(/^\s*/)[0].replace(/\t/g, "    ").length;
+      listItems.push({ indent: indentation, text: trimmed.slice(2) });
       continue;
     }
     if (trimmed === "$$") {
