@@ -28,7 +28,7 @@ El reto consistía en construir un flujo que permitiera:
 - Uso de la tierra e indicadores agroambientales: coberturas, tierras forestales, cultivos, pastizales y combustión de biomasa.
 - Intensidad de emisiones agropecuarias por producto.
 - Emisiones de agricultura y uso de la tierra por categorías como fermentación entérica, gestión de estiércol, cultivo de arroz, fertilizantes, residuos agrícolas y suelos orgánicos.
-- Archivo de elasticidades, factores de conversión, grupos FAO/GCAM, población, PIB y escenarios forestales.
+- Archivo de elasticidades, factores de conversión, población, PIB y escenarios forestales.
 - Información NIR/BUR de Colombia para construir factores de emisión, absorción y costos-beneficios.
 
 ## Metodología
@@ -54,7 +54,7 @@ En cultivos se consolidan área cosechada, producción y rendimiento. En ganader
 
 El modelo calcula consumo aparente integrando producción, importaciones y exportaciones. Para proyectar demanda se prueban modelos de tendencia por producto, junto con trayectorias de población y PIB.
 
-El flujo calcula elasticidades ingreso-demanda bajo varias trayectorias, incluyendo escenarios GCAM y NDC. Con estas elasticidades se estima la tasa de crecimiento del consumo y se construye una base proyectada entre 2014 y 2050.
+El flujo integra elasticidades ingreso-demanda desde una perspectiva de experto, incluyendo escenarios GCAM y NDC. Con estas elasticidades se estima la tasa de crecimiento del consumo y se construye una base proyectada entre 2014 y 2050.
 
 ### Actividad, área requerida y frontera agropecuaria
 
@@ -131,8 +131,8 @@ Desde el punto de vista analítico, el proyecto muestra que las estrategias de m
 - Elasticidades ingreso-demanda
 - Factores de emisión
 - Simulación de escenarios
-- `readxl`, `openxlsx`, `dplyr`, `reshape2`, `ggplot2`, `rmarkdown`
+
 
 ## Nota
 
-Proyecto desarrollado a partir de los scripts ubicados en `public/content/projects/assets/ddplac`. La implementación corresponde a un flujo analítico para modelar emisiones, absorciones y escenarios de mitigación del sector agropecuario, forestal y de uso de la tierra.
+Proyecto desarrollado en el marco de dos contratos suscrito con la Universidad de los Andes. 

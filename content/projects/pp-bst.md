@@ -93,11 +93,11 @@ Las funciones de segundo orden se trataron como datos funcionales. Luego se apli
 
 El suelo rocoso mostró influencia sobre la distribución espacial de las plantas. En el patrón sin marca, la intensidad se reduce cerca de las rocas y aumenta al alejarse de ellas. Este patrón también aparece en varias especies y en las categorías mediana y pequeña.
 
-El efecto fue especialmente claro para `Bactris bidentula`, `Eschweilera tenuifolia`, `Inga gracilifolia` y `Morf sp4`, con parametros asociados a distancia a rocas significativos. En contraste, `Pachira nukakica` mostró un comportamiento distinto: algunos individuos grandes estaban ubicados sobre rocas, sugiriendo capacidad de establecimiento en condiciones restrictivas.
+El efecto fue especialmente claro para `Bactris bidentula`, `Eschweilera tenuifolia` y `Inga gracilifolia`, con parametros asociados a distancia a rocas significativos. En contraste, `Pachira nukakica` mostró un comportamiento distinto: algunos individuos grandes estaban ubicados sobre rocas, sugiriendo capacidad de establecimiento en condiciones restrictivas.
 
 ### Interacciones
 
-El patrón sin marca presentó agregación a distancias cortas, seguida de inhibición a distancias medias. La función K inhomogénea mostró agregación ligera hasta aproximadamente 5.6 metros y luego valores por debajo de la referencia CSR. La pair correlation function evidenció agregación fuerte hasta cerca de 4.2 metros, inhibición entre 5 y 12 metros y comportamiento cercano a aleatoriedad espacial a mayores distancias.
+El patrón sin marca presentó agregación a distancias cortas, seguida de inhibición a distancias medias. La función K inhomogénea mostró agregación ligera hasta aproximadamente 5.6 metros y luego valores por debajo de la referencia CSR (complete spatial randomness). La pair correlation function evidenció agregación fuerte hasta cerca de 4.2 metros, inhibición entre 5 y 12 metros y comportamiento cercano a aleatoriedad espacial a mayores distancias.
 
 Para las especies, las funciones de segundo orden indicaron que la mayoría presenta inhibición, aunque varias especies muestran agregación a distancias muy cortas. `Protium guianense` fue una de las especies con agregación de mayor alcance, cercana a 2.4 metros. A distancias más grandes, el patrón tiende a ser regular, compatible con procesos de competencia por recursos.
 
@@ -123,7 +123,7 @@ El análisis mostró que los patrones puntuales marcados son una herramienta pot
 
 Una lección importante fue que los índices de dispersión son útiles como resumen inicial, pero pueden ocultar rasgos relevantes del patrón. Las funciones de segundo orden, al preservar la información por distancia, ofrecieron una clasificación más coherente con la estructura espacial observada.
 
-También se evidenció la necesidad de integrar conocimiento ecológico con estadística espacial. Variables como estrategia de dispersión, tolerancia a sombra, hábito, estado sucesional y seguimiento temporal podrían mejorar la interpretación de los grupos encontrados.
+También se evidenció la necesidad de integrar conocimiento ecológico con estadística espacial. Variables como estrategia de dispersión, tolerancia a sombra, hábito y estado sucesional podrían mejorar la interpretación de los grupos encontrados.
 
 ## Trabajo futuro
 
@@ -131,7 +131,7 @@ También se evidenció la necesidad de integrar conocimiento ecológico con esta
 - Analizar etapas de crecimiento por especie mediante patrones espacio-temporales.
 - Explorar patrones puntuales tridimensionales usando coordenadas y altura de los árboles.
 - Redefinir categorías de tamaño específicas para la parcela usando resultados de clasificación.
-- Proponer modelos generativos capaces de simular la estructura espacial del bosque y evaluar la importancia de especies o categorías particulares.
+- Proponer modelos capaces de simular la estructura espacial del bosque y evaluar la importancia de especies o categorías particulares.
 
 ## Tecnologías y métodos
 

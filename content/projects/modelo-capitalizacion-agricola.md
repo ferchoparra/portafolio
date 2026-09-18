@@ -178,4 +178,4 @@ Otra lección importante fue la necesidad de validación experta. Por la magnitu
 
 ## Nota
 
-Proyecto desarrollado a partir del informe técnico "Modelo de capitalización de renta - Artículo 49", elaborado en el marco del proyecto de analítica y ciencia de datos del IGAC, Dirección de Investigación y Prospectiva, diciembre de 2024.
+Proyecto desarrollado en el marco de un contrato suscrito con el Instituto Geográfico Agustín Codazzi - IGAC.  
