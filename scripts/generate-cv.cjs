@@ -5,7 +5,13 @@ const { spawnSync } = require('node:child_process');
 const { pathToFileURL } = require('node:url');
 
 const root = path.resolve(__dirname, '..');
-const output = path.join(root, 'cv', 'generated');
+const isLetter = process.argv.includes('--letter');
+const sourceArg = process.argv.find((arg, index) => index > 1 && !arg.startsWith('--'));
+const sourcePath = isLetter ? path.resolve(root, sourceArg || 'coverletters/coverletter.md') : path.join(root, 'cv', 'cv.md');
+const basename = isLetter ? path.basename(sourcePath, '.md') : 'cv';
+const pdfName = isLetter ? `${basename}.pdf` : 'luis-fernando-parra-cv.pdf';
+const label = isLetter ? 'Carta de presentación' : 'CV';
+const output = path.join(root, isLetter ? 'coverletters' : 'cv', 'generated');
 const previewOnly = process.argv.includes('--html');
 const escape = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -48,14 +54,15 @@ function findBrowser() {
 }
 
 function main() {
-  const source = fs.readFileSync(path.join(root, 'cv', 'cv.md'), 'utf8');
+  if (isLetter && path.extname(sourcePath) !== '.md') throw new Error('La carta debe ser un archivo .md.');
+  const source = fs.readFileSync(sourcePath, 'utf8');
   const style = fs.readFileSync(path.join(root, 'cv', 'style.css'), 'utf8');
   const pages = source.split(/<!--\s*pagebreak\s*-->/).filter((page) => page.trim());
   const html = `<!doctype html>
-<html lang="es"><head><meta charset="utf-8"><title>Luis Fernando Parra — CV</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>${style}</style></head>
-<body><div class="toolbar">Vista previa del CV<button onclick="window.print()">Imprimir / Guardar PDF</button></div><main>${pages.map((page) => `<section class="page">${renderPage(page)}</section>`).join('\n')}</main></body></html>`;
+<html lang="es"><head><meta charset="utf-8"><title>Luis Fernando Parra — ${label}</title><meta name="viewport" content="width=device-width, initial-scale=1"><style>${style}</style></head>
+<body><div class="toolbar">Vista previa: ${label}<button onclick="window.print()">Imprimir / Guardar PDF</button></div><main>${pages.map((page) => `<section class="page">${renderPage(page)}</section>`).join('\n')}</main></body></html>`;
   fs.mkdirSync(output, { recursive: true });
-  const htmlPath = path.join(output, 'cv.html');
+  const htmlPath = path.join(output, `${basename}.html`);
   fs.writeFileSync(htmlPath, html);
   console.log(`Vista previa: ${htmlPath}`);
   if (previewOnly) return;
@@ -75,14 +82,15 @@ function main() {
     }
     const pdf = fs.readFileSync(pdfPath);
     if (pdf.subarray(0, 5).toString() !== '%PDF-') throw new Error('El navegador produjo un archivo PDF inválido.');
-    const generatedPdf = path.join(output, 'luis-fernando-parra-cv.pdf');
+    const generatedPdf = path.join(output, pdfName);
     fs.copyFileSync(pdfPath, generatedPdf);
     console.log(`Copia generada: ${generatedPdf}`);
-    const destination = path.join(root, 'public', 'assets', 'cv', 'luis-fernando-parra-cv.pdf');
+    const destination = path.join(root, 'public', 'assets', isLetter ? 'coverletters' : 'cv', pdfName);
+    fs.mkdirSync(path.dirname(destination), { recursive: true });
     try { fs.copyFileSync(pdfPath, destination); }
     catch (error) {
       if (['EBUSY', 'EPERM', 'EACCES'].includes(error.code)) {
-        throw new Error(`No se pudo actualizar el PDF del portafolio (${error.code}). Cierra el PDF si está abierto y ejecuta de nuevo npm run cv:pdf. La versión nueva está en ${generatedPdf}`);
+        throw new Error(`No se pudo actualizar el PDF del portafolio (${error.code}). Cierra el PDF si está abierto y repite el comando. La versión nueva está en ${generatedPdf}`);
       }
       throw error;
     }

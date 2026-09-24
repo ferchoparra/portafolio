@@ -16,6 +16,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "coverletter:preview": "node scripts/generate-cv.cjs --letter --html",
+    "coverletter:pdf": "node scripts/generate-cv.cjs --letter",
     "cv:preview": "node scripts/generate-cv.cjs --html",
     "cv:pdf": "node scripts/generate-cv.cjs",
     "start": "react-scripts start",

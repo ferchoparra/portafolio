@@ -11,6 +11,7 @@
 # production
 /build
 /cv/generated/
+/coverletters/generated/
 
 # misc
 .DS_Store
